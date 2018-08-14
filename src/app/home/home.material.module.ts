@@ -1,0 +1,50 @@
+import {
+  MatFormFieldModule,
+  MatButtonModule,
+  MatToolbarModule,
+  MatIconModule,
+  MatCheckboxModule,
+  MatCardModule,
+  MatInputModule,
+  MatTooltipModule,
+  MatSidenavModule,
+  MatListModule,
+  MatDialogModule,
+  MatSnackBarModule,
+  MatProgressBarModule,
+} from '@angular/material'
+import { NgModule } from '@angular/core'
+
+@NgModule({
+  imports: [
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTooltipModule,
+    MatSidenavModule,
+    MatListModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatProgressBarModule,
+  ],
+  exports: [
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTooltipModule,
+    MatSidenavModule,
+    MatListModule,
+    MatDialogModule,
+    MatProgressBarModule,
+    MatSnackBarModule,
+  ],
+})
+export class HomeMaterialModule {}

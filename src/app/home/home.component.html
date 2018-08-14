@@ -1,0 +1,99 @@
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+    <mat-card class="card-widget mat-teal">
+      <div mat-card-widget>
+        <div mat-card-float-icon>
+          <mat-icon>person</mat-icon>
+        </div>
+        <div class="pl-0">
+          <h2 mat-card-widget-title>120</h2>
+          <p>Employees</p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+    <mat-card class="card-widget mat-purple">
+      <div mat-card-widget>
+        <div mat-card-float-icon>
+          <mat-icon>code</mat-icon>
+        </div>
+        <div class="pl-0">
+          <h2 mat-card-widget-title>40</h2>
+          <p>Engineers</p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+    <mat-card class="card-widget mat-red">
+      <div mat-card-widget>
+        <div mat-card-float-icon>
+          <mat-icon>card_giftcard</mat-icon>
+        </div>
+        <div class="pl-0">
+          <h2 mat-card-widget-title>20</h2>
+          <p>Marketers</p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div fxFlex.gt-sm="25" fxFlex.gt-xs="50" fxFlex="100">
+    <mat-card class="card-widget mat-indigo">
+      <div mat-card-widget>
+        <div mat-card-float-icon>
+          <mat-icon>record_voice_over</mat-icon>
+        </div>
+        <div class="pl-0">
+          <h2 mat-card-widget-title>60</h2>
+          <p>Sales</p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+
+<div fxLayout="row wrap">
+  <div fxFlex.gt-sm="66.66%" fxFlex="100">
+    <ngx-datatable
+      class="material"
+      [rows]="rows"
+      [columnMode]="'force'"
+      [headerHeight]="50"
+      [footerHeight]="0"
+      [rowHeight]="'auto'">
+      <ngx-datatable-column name="Project">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row['project']}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Due Date">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          {{row['date'] | date: 'MMMM dd'}}
+        </ng-template>
+      </ngx-datatable-column>
+      <ngx-datatable-column name="Progress">
+        <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+          <mat-progress-bar mode="determinate" value="{{row['progress']}}" color="primary"></mat-progress-bar>
+        </ng-template>
+      </ngx-datatable-column>
+    </ngx-datatable>
+  </div>
+  <div fxFlex.gt-sm="33.33%" fxFlex="100">
+    <mat-card>
+      <mat-card-title>Newsfeed</mat-card-title>
+      <mat-card-subtitle>Trenind stories today</mat-card-subtitle>
+      <hr>
+      <mat-list>
+        <ng-template let-item let-last="last" ngFor [ngForOf]="messages">
+          <mat-list-item>
+            <img mat-list-avatar src="{{item.photo}}" alt="">
+            <h3 matLine> {{item.from}} </h3>
+            <p matLine> {{item.subject}} - {{item.message}} </p>
+          </mat-list-item>
+        </ng-template>
+      </mat-list>
+    </mat-card>
+  </div>
+</div>

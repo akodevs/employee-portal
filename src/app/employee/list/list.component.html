@@ -1,0 +1,22 @@
+<ngx-datatable
+  class="material"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [limit]="5"
+  [rows]="rows">
+  <ngx-datatable-column name="Name" [width]="500">
+    <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+       {{row.firstName}} {{row.lastName}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Department" [width]="200"></ngx-datatable-column>
+  <ngx-datatable-column name="Email"></ngx-datatable-column>
+  <ngx-datatable-column name="Phone"></ngx-datatable-column>
+  <ngx-datatable-column name="Action" [width]="100">
+    <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+      <button mat-raised-button color="primary" [routerLink]="['/employee/profile', row.id]">View</button>
+    </ng-template>
+  </ngx-datatable-column>
+</ngx-datatable>

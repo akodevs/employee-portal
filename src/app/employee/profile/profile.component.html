@@ -1,0 +1,159 @@
+
+<div class="wrapper" *ngIf="employee">
+  <div fxLayout="row wrap">
+    <div fxFlex.gt-sm="40" fxFlex="100">
+      <mat-card>
+        <mat-card-content>
+          <div fxLayout="row">
+            <div fxFlex="100">
+              <figure>
+                <div class="text-xs-center">
+                  <img [src]="employee.imageUrl" alt="" class="radius-circle">
+                </div>
+              </figure>
+            </div>
+          </div>
+          <div fxLayout="row">
+            <div fxFlex="100" class="text-xs-center">
+              <h1 class="ma-0">{{ employee.firstName }}  {{ employee.middleName }} <b>{{ employee.lastName }}</b>  </h1>
+              <p class="mt-xs mb-xs">{{ employee.department }} Department</p>
+            </div>
+        </div>
+        </mat-card-content>
+        <hr>
+        <mat-card-content>
+          <div fxLayout="row" class="text-xs-center">
+            <div fxFlex="33">
+              <h1 class="ma-0"><b>20</b></h1>
+              <small>Projects</small>
+            </div>
+            <div fxFlex="33">
+              <h1 class="ma-0"><b>8</b></h1>
+              <small>Years of service</small>
+            </div>
+            <div fxFlex="33">
+              <h1 class="ma-0"><b>5</b></h1>
+              <small>Awards</small>
+            </div>
+          </div>
+        </mat-card-content>
+        <hr>
+        <mat-card-content>
+          <h4 class="mt-0">About</h4>
+          <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Curabitur blandit tempus porttitor. Vestibulum id ligula porta felis euismod semper.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div fxFlex.gt-sm="60" fxFlex="100">
+      <div fxLayout="column">
+        <mat-card class="pa-0">
+          <mat-tab-group>
+            <mat-tab>
+              <ng-template matTabLabel>Bio</ng-template>
+              <mat-card-content class="pa-1">
+                <h4 class="mt-0 mb-1">Basic Information</h4>
+                <div fxLayout="row" layout-align="center">
+                  <div class="pr-1" fxFlex>
+                    <div fxLayout="column" class="mb-1">
+                      <span class="text-md">Department</span>
+                      <strong>{{ employee.department }}</strong>
+                    </div>
+
+                    <div fxLayout="column" class="mb-1">
+                      <span class="text-md">Age</span>
+                      <strong>{{ employee.age }}</strong>
+                    </div>
+
+                    <div fxLayout="column" class="mb-1">
+                      <span class="text-md">Email</span>
+                      <strong>{{ employee.email }}</strong>
+                    </div>
+
+                    <div fxLayout="column">
+                      <span class="text-md">Phone</span>
+                      <strong>{{ employee.phone }}</strong>
+                    </div>
+
+                  </div>
+                  <div class="pl-1" fxFlex>
+                    <div fxLayout="column" class="mb-1">
+                      <span class="text-md">Address</span>
+                      <strong>{{ employee.address.city }}, {{ employee.address.state }} </strong>
+                    </div>
+
+                    <div fxLayout="column" class="mb-1"  *ngIf="currentAuthStatus.userRole === role.Manager || currentAuthStatus.userRole === role.SubManager">
+                      <span class="text-md">Driver's License Number</span>
+                      <strong>{{ employee.driversLicense }}</strong>
+                    </div>
+
+                    <div fxLayout="column" class="mb-1"  *ngIf="currentAuthStatus.userRole === role.Manager">
+                      <span class="text-md">Social Security Number</span>
+                      <strong>{{ employee.ssn }}</strong>
+                    </div>
+
+                  </div>
+                </div>
+              </mat-card-content>
+              <hr>
+              <mat-card-content class="pa-1">
+                <h6 class="mt-0 mb-1">Bio</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+              </mat-card-content>
+              <hr>
+              <mat-card-content class="pa-1">
+                <h6 class="mt-0 mb-1">Skills</h6>
+                <canvas height="100" baseChart class="chart"
+                  [data]="pieChartData"
+                  [options]="pieOptions"
+                  [colors]="pieChartColors"
+                  [labels]="pieChartLabels"
+                  [chartType]="pieChartType"></canvas>
+              </mat-card-content>
+            </mat-tab>
+
+            <mat-tab>
+              <ng-template matTabLabel>Activity</ng-template>
+              <div class="activity-stream">
+                <mat-card class="shadow-none">
+                  <mat-card-header>
+                    <img matCardAvatar [src]="employee.imageUrl">
+                    <mat-card-title><b>Received Most Valuable Employee Award</b></mat-card-title>
+                    <mat-card-subtitle>Awards</mat-card-subtitle>
+                  </mat-card-header>
+                </mat-card>
+                <mat-card class="shadow-none">
+                  <mat-card-header>
+                    <img matCardAvatar [src]="employee.imageUrl">
+                    <mat-card-title><b>Project Kodiak Completed</b></mat-card-title>
+                    <mat-card-subtitle>Milestone</mat-card-subtitle>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                    <p href="javascript:;" class="mr-1">Kim Jones - Manager</p>
+                  </mat-card-content>
+                </mat-card>
+                <mat-card class="shadow-none">
+                  <mat-card-header>
+                    <img matCardAvatar [src]="employee.imageUrl">
+                    <mat-card-title><b>Project Veronica Completed</b></mat-card-title>
+                    <mat-card-subtitle>Milestone</mat-card-subtitle>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+                  </mat-card-content>
+                </mat-card>
+                <mat-card class="shadow-none">
+                  <mat-card-header>
+                    <img matCardAvatar [src]="employee.imageUrl">
+                    <mat-card-title><b>Project Milyway Completed</b></mat-card-title>
+                    <mat-card-subtitle>Milestone</mat-card-subtitle>
+                  </mat-card-header>
+                </mat-card>
+              </div>
+            </mat-tab>
+          </mat-tab-group>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
