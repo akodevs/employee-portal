@@ -1,0 +1,200 @@
+[
+  {
+      "id": 0,
+      "imageUrl": "assets/images/face1.jpg",
+      "firstName": "Ramsey",
+      "middleName": "Ayb",
+      "lastName": "Cummings",
+      "gender": "male",
+      "department": "IT",
+      "email": "rcummings@sims.com",
+      "phone": "(392) 212 3121",
+      "driversLicense": "G1231021",
+      "ssn": "123890120",
+      "age": 52,
+      "address": {
+          "state": "South Carolina",
+          "city": "Glendale"
+      }
+  },
+  {
+      "id": 1,
+      "imageUrl": "assets/images/face2.jpg",
+      "firstName": "Stefanie",
+      "middleName": "Se",
+      "lastName": "Huff",
+      "gender": "female",
+      "department": "Sales",
+      "email": "sHuff@sims.com",
+      "phone": "(333) 412 0192",
+      "driversLicense": "F1231311",
+      "ssn": "121039281",
+      "age": 70,
+      "address": {
+          "state": "Arizona",
+          "city": "Beaverdale"
+      }
+  },
+  {
+      "id": 2,
+      "imageUrl": "assets/images/face3.jpg",
+      "firstName": "Mabel",
+      "middleName": "Swensen",
+      "lastName": "David",
+      "gender": "female",
+      "department": "Sales",
+      "email": "mdavid@sims.com",
+      "phone": "(990) 411 8473",
+      "driversLicense": "F0192142",
+      "ssn": "8910271625",
+      "age": 52,
+      "address": {
+          "state": "New Mexico",
+          "city": "Grazierville"
+      }
+  },
+  {
+      "id": 3,
+      "imageUrl": "assets/images/face4.jpg",
+      "firstName": "Frank",
+      "middleName": "Water",
+      "lastName": "Bradford",
+      "department": "IT",
+      "email": "mdawbradfordvid@sims.com",
+      "phone": "(523) 412 9412",
+      "driversLicense": "K4121231",
+      "ssn": "930129401",
+      "gender": "male",
+      "age": 61,
+      "address": {
+          "state": "Wisconsin",
+          "city": "Saranap"
+      }
+  },
+  {
+      "id": 4,
+      "imageUrl": "assets/images/face5.jpg",
+      "firstName": "Forbes",
+      "middleName": "Fivv",
+      "lastName": "Levine",
+      "department": "HR",
+      "email": "flevine@sims.com",
+      "phone": "(282) 341 1121",
+      "driversLicense": "F1212133",
+      "ssn": "903746839",
+      "gender": "male",
+      "age": 34,
+      "address": {
+          "state": "Vermont",
+          "city": "Norris"
+      }
+  },
+  {
+      "id": 5,
+      "imageUrl": "assets/images/face6.jpg",
+      "firstName": "Santiago",
+      "middleName": "Kupper",
+      "lastName": "Mcclain",
+      "department": "Sales",
+      "email": "smcclain@sims.com",
+      "phone": "(222) 311 4444",
+      "driversLicense": "F9382912",
+      "ssn": "839403201",
+      "gender": "male",
+      "age": 38,
+      "address": {
+          "state": "Montana",
+          "city": "Bordelonville"
+      }
+  },
+  {
+      "id": 6,
+      "imageUrl": "assets/images/face7.jpg",
+      "firstName": "Merritt",
+      "middleName": "Lo",
+      "lastName": "Booker",
+      "department": "Marketing",
+      "gender": "male",
+      "email": "mbooker@sims.com",
+      "phone": "(869) 333 4423",
+      "driversLicense": "F9309477",
+      "ssn": "123777212",
+      "age": 33,
+      "address": {
+          "state": "New Jersey",
+          "city": "Aguila"
+      }
+  },
+  {
+      "id": 7,
+      "imageUrl": "assets/images/face4.jpg",
+      "firstName": "Oconnor",
+      "middleName": "Curry",
+      "lastName": "Wade",
+      "department": "Marketing",
+      "email": "owade@sims.com",
+      "phone": "(431) 522 9990",
+      "driversLicense": "F2938123",
+      "ssn": "918213999",
+      "gender": "male",
+      "age": 18,
+      "address": {
+          "state": "Virginia",
+          "city": "Kenmar"
+      }
+  },
+  {
+      "id": 8,
+      "imageUrl": "assets/images/face5.jpg",
+      "firstName": "Leigh",
+      "middleName": "Saint",
+      "lastName": "Beasley",
+      "department": "Marketing",
+      "email": "lbeasley@sims.com",
+      "phone": "(121) 555 2122",
+      "driversLicense": "F9993021",
+      "ssn": "999888300",
+      "gender": "female",
+      "age": 53,
+      "address": {
+          "state": "Texas",
+          "city": "Alfarata"
+      }
+  },
+  {
+      "id": 9,
+      "imageUrl": "assets/images/face2.jpg",
+      "firstName": "John",
+      "middleName": "Pin",
+      "lastName": "Wood",
+      "department": "IT",
+      "email": "jwood@sims.com",
+      "phone": "(990) 444 1111",
+      "driversLicense": "F9993012",
+      "ssn": "888999441",
+      "gender": "male",
+      "age": 52,
+      "address": {
+          "state": "Maine",
+          "city": "Witmer"
+      }
+  },
+  {
+      "id": 10,
+      "imageUrl": "assets/images/face7.jpg",
+      "firstName": "Thompson",
+      "middleName": "Paul",
+      "department": "Sales",
+      "lastName": "Hays",
+      "gender": "male",
+      "email": "thays@sims.com",
+      "phone": "(930) 121 4422",
+      "driversLicense": "F311212",
+      "ssn": "8930291821",
+      "age": 38,
+      "address": {
+          "state": "Nevada",
+          "city": "Kipp"
+      }
+  }
+]
